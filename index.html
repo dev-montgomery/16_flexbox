@@ -21,13 +21,45 @@
       padding: 20px;
       margin: 20px;
       text-align: center;
-      width: 200px;
+      /* flex: 1 0 150px; */
+      /* The property flex includes grow, shrink, and the basis */
+      /* flex-wrap: wrap; */
+      /* flex-wrap wraps elements */
     }
 
     .flex-container {
       display: flex;
-      flex-wrap: wrap;
+      height: 30vh;
+      align-items: center;
+      /* align-items aligns content on the cross axis and requires a height... the axis changes based on flex-direction... the axis also affects flex properties */
+      justify-content: center;
+      /* item 1, 2, 3 are justified content along the main axis. */
     }
+
+    .item-1 {
+      align-self: flex-start;
+    }
+
+    .item-3 {
+      align-self: flex-end;
+    }
+
+    .item-4 {
+      flex-shrink: 0;
+    }
+
+    .item-5 {
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+
+    .item-6 {
+      flex-basis: 0;
+      flex-grow: 2;
+    }
+
+    /* flex-basis is like setting an initial width. It allows other elements with certain flex properties to change in relation to each other */
+
 
   </style>
 </head>
@@ -43,6 +75,20 @@
 
     <div class="item item-3">
       <h3>Item 3</h3>
+    </div>
+  </div>
+
+  <div class="flex-container">
+    <div class="item item-4">
+      <h3>Item 4</h3>
+    </div>
+
+    <div class="item item-5">
+      <h3>Item 5</h3>
+    </div>
+
+    <div class="item item-6">
+      <h3>Item 6</h3>
     </div>
   </div>
 </body>
