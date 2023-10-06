@@ -21,7 +21,7 @@
       padding: 20px;
       margin: 20px;
       text-align: center;
-      flex: 1 0 150px;
+      /* flex: 1 0 150px; */
       /* The property flex includes grow, shrink, and the basis */
       /* flex-wrap: wrap; */
       /* flex-wrap wraps elements */
@@ -29,6 +29,19 @@
 
     .flex-container {
       display: flex;
+      height: 30vh;
+      align-items: center;
+      /* align-items aligns content on the cross axis and requires a height... the axis changes based on flex-direction... the axis also affects flex properties */
+      justify-content: center;
+      /* item 1, 2, 3 are justified content along the main axis. */
+    }
+
+    .item-1 {
+      align-self: flex-start;
+    }
+
+    .item-3 {
+      align-self: flex-end;
     }
 
     .item-4 {
@@ -46,6 +59,8 @@
     }
 
     /* flex-basis is like setting an initial width. It allows other elements with certain flex properties to change in relation to each other */
+
+
   </style>
 </head>
 <body>
